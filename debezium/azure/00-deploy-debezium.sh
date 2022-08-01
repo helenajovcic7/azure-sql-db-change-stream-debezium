@@ -9,7 +9,7 @@ export EVENTHUB_NAME="dm-debezium"
 export CONTAINER_NAME="dm-debezium"
 
 echo "deploying eventhubs namespace"
-az eventhubs namespace create -g $RESOURCE_GROUP -n $EVENTHUB_NAME --enable-kafka=true -l WestEurope
+az eventhubs namespace create -g $RESOURCE_GROUP -n $EVENTHUB_NAME --enable-kafka=true -l westeurope
 
 echo "gathering eventhubs info"
 export EH_NAME=`az eventhubs namespace list -g $EVENTHUB_NAME --query '[].name' -o tsv`
