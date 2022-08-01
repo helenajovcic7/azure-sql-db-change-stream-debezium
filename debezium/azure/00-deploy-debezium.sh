@@ -4,15 +4,15 @@
 
 export DEBEZIUM_VERSION=1.8
 export RESOURCE_GROUP="rgComtradeTest"
-export EVENTHUB_NAME="rgComtradeTest"
-export CONTAINER_NAME="dm-debezium"
+export EVENTHUB_NAME="debeziumct"
+export CONTAINER_NAME="ComtradeTest"
 
-echo "deploying eventhubs namespace"
-az eventhubs namespace create -g $RESOURCE_GROUP -n $EVENTHUB_NAME --enable-kafka=true -l westeurope
+#echo "deploying eventhubs namespace"
+#az eventhubs namespace create -g $RESOURCE_GROUP -n $EVENTHUB_NAME --enable-kafka=true -l WestEurope
 
 echo "gathering eventhubs info"
-export EH_NAME=`az eventhubs namespace list -g $EVENTHUB_NAME --query '[].name' -o tsv`
-export EH_CONNECTION_STRING=`az eventhubs namespace authorization-rule keys list -g $CONTAINER_NAME -n RootManageSharedAccessKey --namespace-name $EVENTHUB_NAME -o tsv --query 'primaryConnectionString'`
+export EH_NAME=`az eventhubs namespace list -g rgComtradeTest --query '[].name' -o tsv`
+#export EH_CONNECTION_STRING=`az eventhubs namespace authorization-rule keys list -g rgComtradeTest -n RootManageSharedAccessKey --namespace-name $EVENTHUB_NAME -o tsv --query 'primaryConnectionString'`
 
 echo "deploying debezium container"
 az container create -g $RESOURCE_GROUP -n $CONTAINER_NAME \
