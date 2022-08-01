@@ -3,7 +3,7 @@
 # Strict mode, fail on any error
 set -euo pipefail
 
-export RESOURCE_GROUP="dm-debezium"
+export RESOURCE_GROUP="rgComtradeTest"
 export CONTAINER_NAME="dm-debezium"
 
 echo "finding debezium ip"
