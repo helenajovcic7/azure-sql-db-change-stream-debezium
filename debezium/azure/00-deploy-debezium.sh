@@ -4,11 +4,11 @@
 
 export DEBEZIUM_VERSION=1.8
 export RESOURCE_GROUP="rgComtradeTest"
-export EVENTHUB_NAME="dm-debezium"
+export EVENTHUB_NAME="debeziumct"
 export CONTAINER_NAME="dm-debezium"
 
 echo "deploying eventhubs namespace"
-az eventhubs namespace create -g $RESOURCE_GROUP -n $EVENTHUB_NAME --enable-kafka=true -l westeurope
+#az eventhubs namespace create -g $RESOURCE_GROUP -n $EVENTHUB_NAME --enable-kafka=true -l westeurope
 
 echo "gathering eventhubs info"
 export EH_NAME=`az eventhubs namespace list -g $EVENTHUB_NAME --query '[].name' -o tsv`
