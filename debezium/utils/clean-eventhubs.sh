@@ -3,8 +3,8 @@
 # Strict mode, fail on any error
 set -euo pipefail
 
-export RESOURCE_GROUP="dm-debezium"
-export EVENTHUB_NAME="dm-debezium"
+export RESOURCE_GROUP="dm-debezium-ct"
+export EVENTHUB_NAME="dm-debezium-ct"
 
 echo "deleting debezium-created eventhubs"
 ehs=("debezium_configs" "debezium_offsets" "debezium_statuses")
