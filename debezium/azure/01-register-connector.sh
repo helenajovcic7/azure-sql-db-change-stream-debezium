@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Strict mode, fail on any error
-#set -euo pipefail
+set -euo pipefail
 
-export RESOURCE_GROUP="rgComtradeTest"
-export CONTAINER_NAME="comtradetest"
+export RESOURCE_GROUP="dm-debezium-ct"
+export CONTAINER_NAME="dm-debezium-ct"
 
 echo "finding debezium ip"
 export DEBEZIUM_IP=`az container show -g $RESOURCE_GROUP -n $CONTAINER_NAME -o tsv --query "ipAddress.ip"`
