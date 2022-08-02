@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Strict mode, fail on any error
-set -euo pipefail
+#set -euo pipefail
 
 export DEBEZIUM_VERSION=1.8
 export RESOURCE_GROUP="dm-debezium-ct"
