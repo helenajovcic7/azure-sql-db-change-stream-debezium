@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Strict mode, fail on any error
-set -euo pipefail
+#set -euo pipefail
 
 export RESOURCE_GROUP="dm-debezium-ct"
 export CONTAINER_NAME="dm-debezium-ct"
