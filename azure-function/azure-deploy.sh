@@ -1,19 +1,19 @@
 #!/bin/bash
 
-set -euo pipefail
+#set -euo pipefail
 
 # Requirements: 
 # - AZ CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
 # - jq: https://stedolan.github.io/jq/download/
 
 # Make sure these values are correct for your environment
-resourceGroup="dm-debezium"
-appName="dm-debezium"
+resourceGroup="dm-debezium-ct"
+appName="dm-debezium-ct"
 storageName="dmdebezium"
 location="WestUS2" 
 
 # Change this if you are using your own github repository
-gitSource="https://github.com/Azure-Samples/azure-sql-db-change-stream-debezium"
+gitSource="https://github.com/helenajovcic7/azure-sql-db-change-stream-debezium.git"
 
 # Check that local.settings.json exists
 settingsFile="./local.settings.json"
