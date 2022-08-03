@@ -4,9 +4,9 @@
 #set -euo pipefail
 
 export DEBEZIUM_VERSION=1.8
-export RESOURCE_GROUP="dm-debezium-ct22"
-export EVENTHUB_NAME="dm-debezium-ct22"
-export CONTAINER_NAME="dm-debezium-ct22"
+export RESOURCE_GROUP="dm-debezium-ct"
+export EVENTHUB_NAME="dm-debezium-ct"
+export CONTAINER_NAME="dm-debezium-ct"
 
 echo "deploying resource group"
 az group create -n $RESOURCE_GROUP -l WestUS2
