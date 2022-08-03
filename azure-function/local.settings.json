@@ -3,6 +3,6 @@
     "Values": {
         "AzureWebJobsStorage": "UseDevelopmentStorage=true",
         "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-        "Debezium":""
+        "Debezium":"Endpoint=sb://dm-debezium-ct.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xxqiPJmsb0hjWrbi5UindktNbFdpNSIR9i9mnzU0jLU="
     }
 }
