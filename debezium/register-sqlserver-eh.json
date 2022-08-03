@@ -1,5 +1,5 @@
 {
-    "name": "wwi",
+    "name": "legacy",
     "config": {
         "snapshot.mode": "schema_only",
         "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
@@ -7,15 +7,15 @@
         "database.port": "1433",
         "database.user": "debezium-wwi",
         "database.password": "Abcd1234!",
-        "database.dbname": "WideWorldImportersStandardCDC",
+        "database.dbname": "legacy",
         "database.server.name": "comtradeoh.database.windows.net",
         "tasks.max": "1",
         "decimal.handling.mode": "string",
-        "table.include.list": "Sales.Orders,Warehouse.StockItems",
+        "table.include.list": "dbo.Orders,dbo.OrderDetails",
         "transforms": "Reroute",
         "transforms.Reroute.type": "io.debezium.transforms.ByLogicalTableRouter",
         "transforms.Reroute.topic.regex": "(.*)",
-        "transforms.Reroute.topic.replacement": "wwi",
+        "transforms.Reroute.topic.replacement": "legacy",
         "tombstones.on.delete": false,
         "database.history": "io.debezium.relational.history.MemoryDatabaseHistory"
     }
