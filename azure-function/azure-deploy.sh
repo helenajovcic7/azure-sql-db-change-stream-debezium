@@ -9,7 +9,7 @@
 # Make sure these values are correct for your environment
 resourceGroup="dm-debezium-ct"
 appName="dm-debezium-ct"
-storageName="dmdebezium"
+storageName="dmdebezium-ct"
 location="WestUS2" 
 
 # Change this if you are using your own github repository
