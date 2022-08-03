@@ -3,8 +3,8 @@
 # Strict mode, fail on any error
 #set -euo pipefail
 
-export RESOURCE_GROUP="dm-debezium-ct22"
-export CONTAINER_NAME="dm-debezium-ct22"
+export RESOURCE_GROUP="dm-debezium-ct"
+export CONTAINER_NAME="dm-debezium-ct"
 
 echo "finding debezium ip"
 export DEBEZIUM_IP=`az container show -g $RESOURCE_GROUP -n $CONTAINER_NAME -o tsv --query "ipAddress.ip"`
